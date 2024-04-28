@@ -1,4 +1,3 @@
-import './header.css'
 import {useEffect, useState} from "react";
 
 export function Sketchfab({ embedUrl }){
@@ -16,7 +15,7 @@ export function Sketchfab({ embedUrl }){
 
 
   return (
-    <div style={{margin: '10px auto'}}>
+    <div style={{margin: '10px auto'}} >
       <iframe
         title="Metro Pinar del Rey - Madrid"
         width="100%"
