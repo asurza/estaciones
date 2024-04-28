@@ -20,7 +20,7 @@ export function CardGrid() {
           </CardBody>
           <CardFooter className="text-small justify-between">
             <b>{item.title}</b>
-            <p className="text-zinc-100 font-bold">{item.linea}</p>
+            <p className="text-zinc-100 font-bold">{item.nombre} | {item.linea}</p>
           </CardFooter>
         </Card>
       ))}
