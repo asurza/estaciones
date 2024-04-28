@@ -3,7 +3,7 @@ import './header.css'
 export function Sketchfab({ embedUrl }){
 
   return (
-    <div style={{width: '80%', margin: '10px auto'}}>
+    <div style={{margin: '10px auto'}}>
       <iframe
         title="Sketchfab Model"
         width="100%"

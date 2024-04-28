@@ -1,4 +1,12 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: system-ui;
+  max-width: 80%;
+
+  @media (800px >= width) {
+
+    max-width: 95%;
+
+  }
+
 }

@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <Header></Header>
+      {/*<Header></Header>*/}
       <Mapa></Mapa>
       <Sketchfab embedUrl={embedUrl}></Sketchfab>
     </>
