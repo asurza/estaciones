@@ -5,7 +5,7 @@ import {EstacionesLogo} from "./../../public/estaciones"
 export function Navegacion(){
 
     return(
-      <Navbar style={{margin: '10px'}} shouldHideOnScroll isBordered>
+      <Navbar shouldHideOnScroll isBordered>
         <NavbarBrand>
           <EstacionesLogo />
           <p className="font-bold text-inherit">Estaciones de Madrid</p>
