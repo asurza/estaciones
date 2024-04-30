@@ -8,7 +8,7 @@ export function Navegacion(){
       <Navbar shouldHideOnScroll isBordered>
         <NavbarBrand>
           <EstacionesLogo />
-          <p className="font-bold text-inherit">Estaciones de Madrid</p>
+          <h1 className="font-bold text-inherit" style={{ lineHeight : 10, padding: 20 }}>Estaciones de Madrid</h1>
         </NavbarBrand>
       </Navbar>
     )
