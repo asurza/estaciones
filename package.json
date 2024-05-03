@@ -21,7 +21,8 @@
     "react-leaflet": "^4.2.1",
     "three": "^0.164.1",
     "three-orbitcontrols": "^2.110.3",
-    "vite-plugin-svgr": "^4.2.0"
+    "vite-plugin-svgr": "^4.2.0",
+    "@react-buddy/ide-toolbox": "^2.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
