@@ -31,7 +31,7 @@ export const estaciones = [
     nombre: "Arturo Soria",
     img: "/images/arturo-soria.jpg",
     linea: "L4",
-    posicion: [40.45598/-3.65572],
+    posicion: [40.45598,-3.65572],
     url: "",
   },
   {
