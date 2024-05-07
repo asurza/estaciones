@@ -17,28 +17,36 @@ export function CardGrid() {
     setIframeUrl(nuevaEstacion.url);
 
     console.log("item pressed: ", nuevaEstacion);// Nueva posición (Nueva York)
-    console.log("Nueva estacion: ", estacion);// Nueva posición (Nueva York)
 
   };
 
   return (
     <>
       <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
-        {estaciones.map((item, index) => (
-          <Card shadow="sm" key={index} isPressable onPress={() => handleCambiarEstacion(item)}>
+        {estaciones.map((estacion, indice) => (
+          <Card shadow="sm" key={`indice-${indice}`} isPressable onPress={() => handleCambiarEstacion(estacion)}>
             <CardBody className="overflow-visible p-0">
               <Image
                 shadow="sm"
                 radius="lg"
                 width="100%"
-                alt={item.nombre}
+                alt={estacion.nombre}
                 className="w-full object-cover h-[140px]"
-                src={item.img}
+                src={estacion.img}
               />
             </CardBody>
             <CardFooter className="text-small justify-between">
-              <b>{item.title}</b>
-              <p className="font-bold">{item.nombre} | {item.linea}</p>
+              <b>{estacion.title}</b>
+              <p className="font-bold">{estacion.nombre}
+
+                {estacion.lineas.map((linea) => (
+                  <div className={`float-right ml-1 h-6 w-6 rounded-full ${linea.color}`}>
+                    <span className="text-white font-bold text-sm">
+                        {linea.numero}
+                    </span>
+                  </div>
+                ))}
+              </p>
             </CardFooter>
           </Card>
         ))}
