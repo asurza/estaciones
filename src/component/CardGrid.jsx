@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import {Card, CardBody, CardFooter, Image} from "@nextui-org/react";
+import {Card, CardBody, CardFooter, Divider, Image} from "@nextui-org/react";
 import {estaciones} from "./../data/estaciones.js";
 import {Mapa} from "./Mapa.jsx";
 import {Sketchfab} from "./Sketchfab.jsx";
@@ -16,7 +16,7 @@ export function CardGrid() {
     setEstacion(nuevaEstacion);
     setIframeUrl(nuevaEstacion.url);
 
-    console.log("item pressed: ", nuevaEstacion);// Nueva posición (Nueva York)
+    //console.log("item pressed: ", nuevaEstacion);// Nueva posición (Nueva York)
 
   };
 
@@ -24,7 +24,7 @@ export function CardGrid() {
     <>
       <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
         {estaciones.map((estacion, indice) => (
-          <Card shadow="sm" key={`indice-${indice}`} isPressable onPress={() => handleCambiarEstacion(estacion)}>
+          <Card shadow="sm" key={indice} isPressable onPress={() => handleCambiarEstacion(estacion)}>
             <CardBody className="overflow-visible p-0">
               <Image
                 shadow="sm"
@@ -40,7 +40,7 @@ export function CardGrid() {
               <p className="font-bold">{estacion.nombre}
 
                 {estacion.lineas.map((linea) => (
-                  <div className={`float-right ml-1 h-6 w-6 rounded-full ${linea.color}`}>
+                  <div className={`float-right content-center ml-1 h-6 w-6 rounded-full ${linea.color}`}>
                     <span className="text-white font-bold text-sm">
                         {linea.numero}
                     </span>
@@ -52,6 +52,15 @@ export function CardGrid() {
         ))}
       </div>
 
+      <Divider className="my-4" />
+
+      <div class="py-8 sm:py-16">
+          <div class="mx-auto max-w-xl lg:mx-0">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Estación {estacion.nombre}</h1>
+            <p class="mt-2 text-lg leading-8 text-gray-600">{estacion.descripcion}</p>
+          </div>
+      </div>
+
       <div className='mapa-container'>
         <MapContainer center={estacion.posicion}
                       zoom={18}
@@ -60,7 +69,7 @@ export function CardGrid() {
             url="https://tile.thunderforest.com/transport/{z}/{x}/{y}@2x.png?apikey=6a45f6dce3954ca5913a23f97697fe3d"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
-          <FlyMapTo center={estacion.posicion} zoom={18} />
+          <FlyMapTo center={estacion.posicion} zoom={18}/>
         </MapContainer>
       </div>
 

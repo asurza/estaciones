@@ -36,6 +36,7 @@ const linea10 = {
 export const estaciones = [
   {
     nombre: "Pinar del Rey",
+    descripcion: "La estación ubicada en el distrito de Hortaleza en Madrid.",
     img: "/images/pinar-rey.jpg",
     lineas: [linea8],
     posicion: [40.46786,-3.64857],
